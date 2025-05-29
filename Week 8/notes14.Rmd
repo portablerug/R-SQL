@@ -1,0 +1,45 @@
+---
+title: "Lecture 14 Notes"
+author: "zurg"
+date: "2025-05-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(DBI)
+library(RSQLite)
+library(sqldf)
+```
+
+## Slides
+In lectures previous, we worked with the following commands
+
+```{R Old Commands, eval=FALSE}
+dbConnect()
+dbWriteTable()
+dbListTables()
+dbGetQuery()
+```
+
+#### DbGetQuery()
+- SELECT (attributes)
+- FROM   (one or more relations)
+- WHERE  (conditions)
+
+## Section 14 
+Friday of week 10, extra office hours
+![join image](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0e377725-1e0a-400c-bab7-0099dbf1efb8_1280x1664.png)
+
+#### Joins
+Left join
+  - Selects circle A (left is preserved)
+  
+Right Join
+  - Selects circle B (right is preserved)
+
+
+
+
+
+
