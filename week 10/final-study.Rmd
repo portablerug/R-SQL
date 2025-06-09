@@ -1,0 +1,108 @@
+---
+title: "final"
+author: "zurg"
+date: "2025-06-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## FINAL HIINTS
+
+tiny_clothes realtions are printed, DO NOT REMEMBER
+  - 21 database questions and 29 R questions
+    - basic knoweldge or result of running code, filling in the blank
+  - dbGetQuery(); various where condition 
+  - dbSendQuery()
+  - dbFetch()
+  - dbSendStatement()
+  - dbRowsAffected
+  
+  - read.csv
+  - data.frame
+  - matrix
+  - array
+  - need to know how to generate a sample in R (r.binom)
+  - all work on p
+  - integrity constraints
+  - order by, group by
+  - questions on JOINS
+  - lists (in R)
+  - double bracket notation ([[1]] , [[2,3]])
+  - all distributions, binomial, uniform, poisson, exponetial,
+     - when to use them and conditions (4 conditions for binomial experiment)
+      - p.binom, d.binom
+    
+  - user defined functions
+  - all control strucutres
+  - work on descriptive statistics (in R and in general)
+  - probability RULES (no bayes)
+    - simple calculations 
+    
+    
+
+## Section Notes
+
+```{r}
+dbGetQuery(mdb, 'select ORDER_NO , MAX(QUNAITY) from INVOUICES
+           group by OPRER_NO')
+
+```
+
+- WHERE
+  - filters for raw data
+  - Also for new columns like Price*Quantity
+  
+- HAVING
+  -filters for aggregated data
+  - 
+  
+LOOK FOR MAX() , AVG(), use having, also uses GROUP BY
+
+- ORDER BY
+  - defaults to ASCENDING
+```{r}
+
+```
+  - need to specify DESC (decending)
+  
+  - breaking ties
+    ```{r}
+    dbGetQuery
+    ```
+
+- Column Position
+
+
+## JOINS
+
+- Join and ON run together
+  - when JOIN cannot find ON > Cartesian Product
+  - if you JOIN without ON, you wil always get the cartesian product
+  
+- INNER JOIN
+  - Keeps rows that are similar
+- LEFT JOIN
+  - Left table needs to find a match on the right.
+  - Every row on the left needs to go somehwere
+  - if there is no match, <NULL>
+- RIGHT JOIN
+  - Same thing but from right table
+  - arrow has to come from eveyr row
+  
+  
+- to append a data.frame, the data.frame shoudl ahve the same name relations
+  - Column names must match
+  
+  
+## View (read-only Table)
+   - only gives access to the view table and not entire database
+   - used for security. (protect information)
+   
+   
+  
+
+
+  
